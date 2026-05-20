@@ -1,0 +1,24 @@
+<!-- ========================= FOOTER ========================= -->
+<footer class="section-footer border-top" style="background:#111827;color:#f8fafc;padding:22px 0;">
+	<div class="container">
+		<section class="footer-bottom row align-items-center">
+			<div class="col-md-12 mx-auto text-center">
+				<p style="margin-bottom:4px;font-weight:700;">&copy; 2025 MyHouse - Ecole IRIS</p>
+				<p style="margin-bottom:0;color:#cbd5e1;">Projet e-commerce de vente de meubles</p>
+			</div>
+		</section>
+	</div><!-- //container -->
+</footer>
+<!-- ========================= FOOTER END // ========================= -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$('.thumb a').click(function(e){
+			e.preventDefault();
+			$('.mainImage img').attr('src',$(this).attr("href"));
+		})
+	})
+</script>
+</body>
+
+</html>

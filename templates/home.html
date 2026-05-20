@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<!-- ========================= SECTION MAIN ========================= -->
+<section class="section-intro padding-y-sm">
+<div class="container">
+
+<div class="intro-banner-wrap">
+	<!-- <img src="{% static 'images/MEUBLES/260.jpg' %}" style=" width:100%; " class="img-fluid rounded" > -->
+	<div class="slider">
+      <div class="slides">
+        <input type="radio" name="radio-btn" id="radio1" />
+        <input type="radio" name="radio-btn" id="radio2" />
+        <input type="radio" name="radio-btn" id="radio3" />
+        <input type="radio" name="radio-btn" id="radio4" />
+        <input type="radio" name="radio-btn" id="radio5" />
+        <input type="radio" name="radio-btn" id="radio6" />
+        <input type="radio" name="radio-btn" id="radio7" />
+        <input type="radio" name="radio-btn" id="radio8" />
+        <input type="radio" name="radio-btn" id="radio9" />
+        <div class="slide first">
+          <img src="{% static 'images/MEUBLES/1.jpg' %}" alt="" />
+        </div>
+        <div class="slide">
+          <img src="{% static 'images/MEUBLES/2.jpg' %}" alt="" />
+        </div>
+        <div class="slide">
+          <img src="{% static 'images/MEUBLES/3.jpg' %}" alt="" />
+        </div>
+        <div class="slide">
+          <img src="{% static 'images/MEUBLES/4.jpg' %}" alt="" />
+        </div>
+        <div class="slide">
+          <img src="{% static 'images/MEUBLES/5.jpg' %}" alt="" />
+        </div>
+        <div class="slide">
+          <img src="{% static 'images/MEUBLES/6.jpg' %}" alt="" />
+        </div>
+        <div class="slide">
+          <img src="{% static 'images/MEUBLES/7.jpg' %}" alt="" />
+        </div>
+        <div class="slide">
+          <img src="{% static 'images/MEUBLES/8.jpg' %}" alt="" />
+        </div>
+        <div class="slide">
+          <img src="{% static 'images/MEUBLES/9.jpg' %}" alt="" />
+        </div>
+        <!-- <div class="navigation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+            <div class="auto-btn4"></div>
+          </div>
+        </div>
+        <div class="navigation-manual">
+          <label for="radio1" class="manual-btn"></label>
+          <label for="radio2" class="manual-btn"></label>
+          <label for="radio3" class="manual-btn"></label>
+          <label for="radio4" class="manual-btn"></label>
+        </div> -->
+      </div>
+    </div>
+</div>
+
+</div> <!-- container //  -->
+</section>
+<!-- ========================= SECTION MAIN END// ========================= -->
+
+<!-- ========================= SECTION  ========================= -->
+<section class="section-name padding-y-sm">
+<div class="container">
+
+<header class="section-heading">
+	<a href="{% url 'store' %}" class="btn btn-outline-primary float-right">See all</a>
+	<h3 class="section-title"> Recent Products</h3>
+</header><!-- sect-heading -->
+
+
+<div class="row">
+	{% for product in products %}
+	<div class="col-md-3">
+		<div class="card card-product-grid">
+			<a href="{{ product.get_url }}" class="img-wrap"> <img src="{{ product.images.url }}"> </a>
+			<figcaption class="info-wrap">
+				  <div class="fix-height">
+				<a id="ahover" href="{{ product.get_url }}" class="title">{{ product.product_name }}</a>
+				<div class="rating-star">
+					<span>
+						<i class="fa fa-star{% if product.averageReview < 0.5 %}-o{% elif product.averageReview >= 0.5 and product.averageReview < 1 %}-half-o {% endif %}" aria-hidden="true"></i>
+						<i class="fa fa-star{% if product.averageReview < 1.5 %}-o{% elif product.averageReview >= 1.5 and product.averageReview < 2 %}-half-o {% endif %}" aria-hidden="true"></i>
+						<i class="fa fa-star{% if product.averageReview < 2.5 %}-o{% elif product.averageReview >= 2.5 and product.averageReview < 3 %}-half-o {% endif %}" aria-hidden="true"></i>
+						<i class="fa fa-star{% if product.averageReview < 3.5 %}-o{% elif product.averageReview >= 3.5 and product.averageReview < 4 %}-half-o {% endif %}" aria-hidden="true"></i>
+						<i class="fa fa-star{% if product.averageReview < 4.5 %}-o{% elif product.averageReview >= 4.5 and product.averageReview < 5 %}-half-o {% endif %}" aria-hidden="true"></i>
+				</span>
+				</div>
+				<div class="price-wrap mt-2">  <span class="price">{{ product.price }} €</span></div>
+				</div> <!-- price-wrap.// -->
+				<a href="{{product.get_url}}" class="btn btn-block btn-primary"
+					>View Details
+				</a>
+			</figcaption>
+		</div>
+	</div> <!-- col.// -->
+	{% endfor %}
+</div> <!-- row.// -->
+
+</div><!-- container // -->
+</section>
+<!-- ========================= SECTION  END// ========================= -->
+
+
+
+
+
+
+</body>
+</html>
+{% endblock %}
