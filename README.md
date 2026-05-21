@@ -69,10 +69,6 @@ README.md
 
 📸 Captures d’écran
 
-🏠 Page d’accueil
-
-![Accueil](screenshots/article.png)
-
 Interface moderne d’affichage des meubles.
 
 👤 Connexion utilisateur
