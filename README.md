@@ -197,12 +197,19 @@ http://127.0.0.1:8000/
 Ce projet m’a permis de développer mes compétences en :
 
 Développement web avec Django
+
 Architecture backend
+
 Gestion de base de données MySQL
+
 Authentification utilisateur
+
 Workflow e-commerce
+
 Intégration frontend/backend
+
 Architecture MVC/MVT
+
 Utilisation de Git et GitHub
 
 📌 Améliorations Futures
