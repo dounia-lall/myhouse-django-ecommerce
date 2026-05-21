@@ -208,10 +208,15 @@ Utilisation de Git et GitHub
 📌 Améliorations Futures
 
 Intégration de Stripe
+
 Déploiement avec Docker
+
 API REST
+
 Notifications email
+
 Wishlist
+
 Responsive design avancé
 
 👩‍💻 Auteur
